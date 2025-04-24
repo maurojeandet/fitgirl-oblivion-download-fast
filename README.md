@@ -1,5 +1,5 @@
 ## Playwright based downloader for fitgirl oblivion (could change)
-`npm install`
+`npm i` and then `npx playwright install`
 
 #### To run:
 `npx playwright test` (I see `--ui` most beneficial to have a visual representation when debugging)
