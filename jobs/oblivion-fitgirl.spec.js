@@ -1,11 +1,13 @@
 // @ts-check
-import { test, expect } from '@playwright/test'
+import { test } from '@playwright/test'
 import downloadLinks from './links.js'
 
-const downloadFolder = 'E:\\Torrents\\'
+const downloadFolder = 'C:\\Downloads\\'
 
+// set timeout to 3 hours
 test.setTimeout(1000*60*60*3)
-test('download links', async ({ page }) => {
+
+test('download parts', async ({ page }) => {
   for (const dl of downloadLinks) {
     await page.goto(dl)
     const downloadPromise = page.waitForEvent('download');
